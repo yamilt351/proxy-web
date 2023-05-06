@@ -28,7 +28,7 @@
 
   One way to protect our privacy online is by using a proxy server. A proxy acts as an intermediary between our device and the internet, routing our requests through a different IP address and encrypting our data. This makes it more difficult for websites and other parties to track our activities and identify our location.
 
-- There are several types of proxies, including:
+There are several types of proxies, including:
 
  - Web proxies: These are online services that allow us to access the internet through a different IP address. They are easy to use and require no installation, but they can be slow and may not provide the same level of security as other types of proxies.
 
@@ -45,3 +45,22 @@
   - "Proxy server" en Wikipedia: https://en.wikipedia.org/wiki/Proxy_server
   - "Why you need a proxy server in 2021" de TechRadar: https://www.techradar.com/news/why-you-need-a-proxy-server-in-2021
   - "Why use a proxy server? 8 reasons to do so" de Norton: https://us.norton.com/internetsecurity-privacy-why-use-a-proxy-server-8-reasons-to-do-so.html
+
+## Diferences between web proxy & Vpns
+
+Web proxies and VPNs are both tools that can be used to enhance online privacy and security. However, they operate in different ways and have distinct advantages and disadvantages.
+
+Web proxies are intermediary servers that act as a gateway between the user and the internet. They intercept all network traffic and can be used to modify or filter it. When a user makes a request to access a website through a web proxy, the request is first sent to the proxy server, which then forwards it to the website. The website's response is then sent back to the proxy server, which forwards it to the user. Web proxies can be configured to block ads, scripts, and other forms of content that may be considered harmful or undesirable. They can also be used to bypass internet censorship and access blocked websites.
+
+VPNs, on the other hand, create an encrypted tunnel between the user's device and a remote server. When the user connects to the internet through a VPN, all network traffic is routed through this tunnel, preventing anyone from intercepting or eavesdropping on the user's activity. This makes VPNs particularly useful for protecting sensitive data such as online banking transactions or personal information.
+
+One key difference between web proxies and VPNs is that web proxies are generally easier to set up and use, as they do not require any software to be installed. Users can simply enter the URL of the proxy server into their browser and start browsing. VPNs, on the other hand, typically require software to be installed on the user's device, and may require more advanced technical knowledge to set up.
+
+Another difference is that web proxies only intercept traffic that is sent through the browser, while VPNs can intercept all network traffic, including that sent through other applications such as email clients and online gaming platforms.
+
+In terms of privacy and security, VPNs are generally considered to be more robust than web proxies. The encryption provided by VPNs makes it more difficult for anyone to intercept or monitor the user's online activity. However, this added security comes at a cost: VPNs can be slower than web proxies due to the extra processing required for encryption and decryption.
+
+- References:
+
+  - "What Is a VPN, and Why Would I Need One?" - How-To Geek
+  - "Proxy vs VPN: Which is Right for Me?" - NordVPN
