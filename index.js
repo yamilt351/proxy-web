@@ -51,6 +51,7 @@ app.use('/', (req, res, next) => {
     // create proxy
     const proxy = createProxyMiddleware({
       target: url,
+      ws: true, // enable WebSocket proxying
       changeOrigin: true,
       onProxyRes: function (proxyRes, req, res) {
         proxyRes.headers['content-security-policy'] =
