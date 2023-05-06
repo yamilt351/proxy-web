@@ -1,15 +1,14 @@
 import express from 'express';
-import helmet from 'helmet';
-import morgan from 'morgan';
+import importMidlewares from './midlewareHandler.js';
 import { createProxyMiddleware } from 'http-proxy-middleware';
 
 const app = express();
-// set up headers with helmet
-app.use(helmet());
-// log responses
-app.use(
-  morgan(':method :url :status :res[content-length] - :response-time ms'),
-);
+const middlewares = await importMidlewares();
+
+//import middlewares
+middlewares.forEach((middleware) => {
+  app.use(middleware);
+});
 
 //proxy
 app.use((req, res, next) => {
@@ -65,6 +64,7 @@ app.use('/', (req, res, next) => {
     console.error(error.message);
   }
 });
+
 app.listen(4000, () => {
   console.log('Proxy listening on port 4000...');
 });
