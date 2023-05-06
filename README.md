@@ -13,3 +13,4 @@
   References:
   [1] World Wide Web Consortium (W3C). (2004). Glossary of Terms for Device Independence. Retrieved from https://www.w3.org/TR/di-gloss/
   [2] Gourley, D., & Totty, B. (2002). HTTP: The Definitive Guide. O'Reilly Media, Inc.
+![proxy-diagram](https://user-images.githubusercontent.com/88646148/236625471-8d3cbc0e-3376-46b1-bb29-bdff25cb1a40.png)
