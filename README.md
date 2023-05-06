@@ -64,3 +64,24 @@ In terms of privacy and security, VPNs are generally considered to be more robus
 
   - "What Is a VPN, and Why Would I Need One?" - How-To Geek
   - "Proxy vs VPN: Which is Right for Me?" - NordVPN
+
+## Web Proxy weakness
+Web proxies have a number of weaknesses and limitations that users should be aware of:
+
+  - Lack of encryption
+    - One of the biggest weaknesses of web proxies is that they do not encrypt user data. This means that any data transmitted between the user and the proxy server can be intercepted and read by third parties. As a result, web proxies are not suitable for users who require a high level of security, such as those who need to access confidential or sensitive information.
+
+  - Limited privacy
+    - While web proxies can help to hide a user's IP address, they do not provide complete anonymity. In fact, many web proxies are owned and operated by third parties who may be collecting user data for their own purposes. This means that users who require a high level of privacy and anonymity may want to consider using a VPN instead.
+
+  - Performance issues
+    - Web proxies can also suffer from performance issues, particularly during peak usage times. This is because web proxies rely on a single server to handle multiple users, which can result in slow page load times and buffering issues.
+
+  - Compatibility issues
+    - Web proxies can also have compatibility issues with certain websites and web applications. This is because web proxies may modify or strip out certain types of content, such as cookies and JavaScript, which can cause websites to malfunction or break.
+
+  - Security vulnerabilities
+    - Web proxies can also be vulnerable to security vulnerabilities, such as cross-site scripting (XSS) attacks, which can allow attackers to inject malicious code into web pages. Additionally, web proxies can be targeted by hackers who are looking to steal user data or hijack the proxy server for their own purposes.
+
+  - Limited functionality
+    - Finally, web proxies have limited functionality compared to VPNs. While web proxies can help users to access blocked websites and bypass geographic restrictions, they do not provide the same level of security and privacy as VPNs. For example, VPNs use encryption to protect user data, which can help to prevent data breaches and cyber attacks.
