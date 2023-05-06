@@ -26,6 +26,12 @@ export function HeaderXForwardedFor(req, res, next) {
   next();
 }
 
+function redirect(req, res, next) {
+  res.redirect(
+    `/${Object.keys(req.query)[0]}=${req.query[Object.keys(req.query)[0]]}`,
+  );
+}
+
 function queryCheck(req, res, next) {
   console.log(req.query.path);
   if (req.query.path) {
@@ -37,18 +43,12 @@ function queryCheck(req, res, next) {
   }
 }
 
-function redirect(req, res, next) {
-  res.redirect(
-    `/${Object.keys(req.query)[0]}=${req.query[Object.keys(req.query)[0]]}`,
-  );
-}
-
 function urlCreation(req, res, next) {
   queryCheck(req, res, next);
 
   // split the url to proxy
   const url = (req.url || '').replace('/?url=', '');
-  console.log(url);
+
   return url;
 }
 
@@ -59,12 +59,6 @@ function proxyCreation(req, res, next) {
     target: url,
     ws: true, // enable WebSocket proxying
     changeOrigin: true,
-    onProxyRes: function (proxyRes, req, res) {
-      proxyRes.headers['content-security-policy'] =
-        "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self'";
-      proxyRes.headers['strict-transport-security'] =
-        'max-age=63072000; includeSubDomains; preload';
-    },
   });
   console.log(proxy);
   proxy(req, res, next);
