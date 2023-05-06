@@ -5,7 +5,7 @@
    - [Diferences between web proxy & Vpns](Diferences-between-web-proxy-&-Vpns)
    - [Web Proxy weakness](Web-Proxy-weakness)
 - [About this project](About-this-project)
-# what is a web proxy?
+# What is a web proxy?
 
 - A web proxy is an intermediary server that acts as a link between the client and web server. Its main function is to intercept client requests and send them to the appropriate web server, and then send server responses back to the client.
 
