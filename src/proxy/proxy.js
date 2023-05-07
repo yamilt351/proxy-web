@@ -1,30 +1,8 @@
 import { createProxyMiddleware } from 'http-proxy-middleware';
 
-export function hostHeader(req, res, next) {
-  // Obtiene el nombre de host del encabezado "Host" de la solicitud
-  const hostHeader = req.headers.host;
-  // Establece el encabezado "Host" en la solicitud al nombre de host obtenido anteriormente
-  req.headers.host = hostHeader;
-  console.log(hostHeader);
-  next();
-}
 
-export function HeaderXForwardedFor(req, res, next) {
-  const xForwardedFor = req.headers['x-forwarded-for'];
-  const clientIp = req.ip;
-  console.log(clientIp);
-  // Si no hay encabezado "X-Forwarded-For", agrega la dirección IP del cliente
-  if (!xForwardedFor) {
-    console.log('xForwardedFor false');
-    req.headers['x-forwarded-for'] = clientIp;
-  } else {
-    console.log('xForwardedFor true');
-    // Si ya hay un encabezado "X-Forwarded-For", agrega la dirección IP del cliente al final
-    req.headers['x-forwarded-for'] = `${xForwardedFor}, ${clientIp}`;
-  }
 
-  next();
-}
+
 
 function redirect(req, res, next) {
   res.redirect(
